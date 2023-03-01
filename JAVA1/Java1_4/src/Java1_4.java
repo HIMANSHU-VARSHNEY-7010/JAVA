@@ -1,3 +1,6 @@
+//  Q4) Create a two dimensional array of integers and display:
+//      sum of all elements of each column
+//      sum of all elements of each row
 public class Java1_4 {
     public static void main(String[] args) {
         int[][] arr = new int[][]{ {1,2,3} , {8,7,6} , {4,5,9} };
