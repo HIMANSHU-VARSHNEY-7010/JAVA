@@ -1,42 +1,72 @@
-package QUES_1;//) Implement a banking system using java. Create 3 sub class of Bank : SBI,BOI,ICICI
+package QUES_1;
+//     Q1 Implement a banking system using java. Create 3 sub class of Bank : SBI,BOI,ICICI
 //        Classes should have attributes like Name, headofficeAddress, chairmanName, branchCount, fdInterestRate,
 //        personalLoanInterestRate, homeLoanInterestRate.
 //        All 3 should have following methods:
-//
 //        add getters and setters for the fields
 //        print details of every bank (override toString)
-//
-//        2) WAP showing try, multi-catch and finally blocks.
-//
-//        3) WAP to produce NoClassDefFoundError and ClassNotFoundException exception.
-//
-//        4) Create a custom exception that do not have any stack trace.
-
 
 import java.util.Scanner;
 
 public class QUES_1 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in) ;
-
+        System.out.println("Enter the Bank name(BOI, ICICI Bank, BOI): ");
+        String BankName = scn.nextLine();
 //        Name, headOfficeAddress, chairmanName, branchCount, fdInterestRate,
 //        personalLoanInterestRate, homeLoanInterestRate.
+        switch (BankName) {
+            case "SBI":
+                SBI bankDetailsSBI = new SBI();
 
-        SBI b = new SBI();
+                bankDetailsSBI.setName(BankName);
+                System.out.println("Enter the Head Office Name: ");
+                bankDetailsSBI.setHeadOfficeAddress(scn.nextLine());
+                System.out.println("Enter the ChairName: ");
+                bankDetailsSBI.setChairmanName(scn.nextLine());
+                System.out.println("Enter the Branch Count: ");
+                bankDetailsSBI.setBranchCount(scn.nextInt());
+                System.out.println("Enter the Personal Loan Interest: ");
+                bankDetailsSBI.setPersonalLoanInterestRate(scn.nextInt());
+                System.out.println("Enter the Home Loan Interest Rate: ");
+                bankDetailsSBI.setHomeLoanInterestRate(scn.nextInt());
+                System.out.println(bankDetailsSBI);
+                break;
+            case "BOI":
+                BOI bankDetailsBOI = new BOI();
 
-        System.out.println("Enter the Bank name: ");
-        b.setName(scn.nextLine());
-        System.out.println("Enter the Head Office Name: ");
-        b.setHeadOfficeAddress(scn.nextLine());
-        System.out.println("Enter the ChairName: ");
-        b.setChairmanName(scn.nextLine());
-        System.out.println("Enter the Branch Count: ");
-        b.setBranchCount(scn.nextInt());
-        System.out.println("Enter the Personal Loan Interest: ");
-        b.setPersonalLoanInterestRate(scn.nextInt());
-        System.out.println("Enter the Home Loan Interest Rate: ");
-        b.setHomeLoanInterestRate(scn.nextInt());
+                bankDetailsBOI.setName(BankName);
+                System.out.println("Enter the Head Office Name: ");
+                bankDetailsBOI.setHeadOfficeAddress(scn.nextLine());
+                System.out.println("Enter the ChairName: ");
+                bankDetailsBOI.setChairmanName(scn.nextLine());
+                System.out.println("Enter the Branch Count: ");
+                bankDetailsBOI.setBranchCount(scn.nextInt());
+                System.out.println("Enter the Personal Loan Interest: ");
+                bankDetailsBOI.setPersonalLoanInterestRate(scn.nextInt());
+                System.out.println("Enter the Home Loan Interest Rate: ");
+                bankDetailsBOI.setHomeLoanInterestRate(scn.nextInt());
+                System.out.println(bankDetailsBOI);
+                break;
+            case "ICICI Bank":
+                ICICI bankDetailsICICI = new ICICI();
 
-        System.out.println(b);
+                bankDetailsICICI.setName(BankName);
+                System.out.println("Enter the Head Office Name: ");
+                bankDetailsICICI.setHeadOfficeAddress(scn.nextLine());
+                System.out.println("Enter the ChairName: ");
+                bankDetailsICICI.setChairmanName(scn.nextLine());
+                System.out.println("Enter the Branch Count: ");
+                bankDetailsICICI.setBranchCount(scn.nextInt());
+                System.out.println("Enter the Personal Loan Interest: ");
+                bankDetailsICICI.setPersonalLoanInterestRate(scn.nextInt());
+                System.out.println("Enter the Home Loan Interest Rate: ");
+                bankDetailsICICI.setHomeLoanInterestRate(scn.nextInt());
+                System.out.println(bankDetailsICICI);
+                break;
+            default:
+                System.out.println("Enter a valid option.");
+                break;
+        }
     }
 }
