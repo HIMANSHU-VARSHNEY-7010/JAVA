@@ -17,6 +17,5 @@ public class QUES_2 {
 
         System.out.println("This statement will be executed also.") ;
 
-
     }
 }

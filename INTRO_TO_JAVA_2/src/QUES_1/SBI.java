@@ -51,7 +51,7 @@ public class SBI extends Bank{
 
     public String toString(){
 
-        String s = "Details for SBI are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PrsnlLnIntRt " +personalLoanInterestRate + "->HmLnIntRt "+homeLoanInterestRate;
+        String s = "Details for SBI are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PrsnlLnIntRt " +personalLoanInterestRate + "->HmLnagni4912@gmail.comIntRt "+homeLoanInterestRate;
 
 
         return s;

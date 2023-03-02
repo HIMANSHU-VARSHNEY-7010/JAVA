@@ -60,4 +60,8 @@ abstract class Bank {
     public void setHomeLoanInterestRate(int homeLoanInterestRate) {
         this.homeLoanInterestRate = homeLoanInterestRate;
     }
+    public String toString(){
+        String s = "Details of the Bank are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PrsnlLnIntRt " +personalLoanInterestRate + "->HmLnIntRt "+homeLoanInterestRate;
+        return s;
+    }
 }

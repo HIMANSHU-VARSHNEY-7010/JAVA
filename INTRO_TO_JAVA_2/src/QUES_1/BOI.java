@@ -53,7 +53,6 @@ public class BOI extends Bank{
 
         String s = "Details for BOI are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PrsnlLnIntRt " +personalLoanInterestRate + "->HmLnIntRt "+homeLoanInterestRate;
 
-
         return s;
     }
 }
