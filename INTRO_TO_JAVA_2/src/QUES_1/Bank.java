@@ -61,7 +61,7 @@ abstract class Bank {
         this.homeLoanInterestRate = homeLoanInterestRate;
     }
     public String toString(){
-        String s = "Details of the Bank are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PrsnlLnIntRt " +personalLoanInterestRate + "->HmLnIntRt "+homeLoanInterestRate;
+        String s = "Details of the Bank are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PersonalLoanInterestRate " +personalLoanInterestRate + "->HomeLoanInterestRate "+homeLoanInterestRate;
         return s;
     }
 }

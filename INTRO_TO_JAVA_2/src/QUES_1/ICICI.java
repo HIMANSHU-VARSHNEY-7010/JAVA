@@ -53,7 +53,7 @@ public class ICICI extends Bank{
 
     public String toString(){
 
-        String s = "Details for ICICI are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PrsnlLnIntRt " +personalLoanInterestRate + "->HmLnIntRt "+homeLoanInterestRate;
+        String s = "Details for ICICI are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PersonalLoanInterestRate " +personalLoanInterestRate + "->HomeLoanInterestRate "+homeLoanInterestRate;
 
 
         return s;

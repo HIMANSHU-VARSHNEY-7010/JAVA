@@ -1,5 +1,5 @@
 package QUES_1;
-public class BOI extends Bank{
+class BOI extends Bank{
     public String getName() {
         return name;
     }
@@ -45,13 +45,13 @@ public class BOI extends Bank{
         this.personalLoanInterestRate = personalLoanInterestRate;
     }
 
-    public void setHomeLoanInterestRate(int homeLoanInterestRate) {
+    public void setHomeLoanInterestRate(int homeLoanInterestRate){
         this.homeLoanInterestRate = homeLoanInterestRate;
     }
 
     public String toString(){
 
-        String s = "Details for BOI are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PrsnlLnIntRt " +personalLoanInterestRate + "->HmLnIntRt "+homeLoanInterestRate;
+        String s = "Details for BOI are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PersonalLoanInterestRate " +personalLoanInterestRate + "->HomeLoanInterestRate "+homeLoanInterestRate;
 
         return s;
     }
