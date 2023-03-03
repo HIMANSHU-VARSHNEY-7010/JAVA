@@ -38,8 +38,8 @@ public class QUES_2 {
             System.out.println("Enter The Phone Number: ");
             String phoneNo = scn.nextLine() ;
 
-            SingletonClass s1 = SingletonClass.getInstance(FirstName , LastName , age , phoneNo) ;
-            System.out.println(s1.showDetails());
+            SingletonClass getDetails = SingletonClass.getInstance(FirstName , LastName , age , phoneNo) ;
+            System.out.println(getDetails.showDetails());
 
             System.out.println("Do you want to continue creating users? (Type QUIT to exit):");
             String strng = scn.nextLine();
@@ -48,7 +48,7 @@ public class QUES_2 {
             }
 
             try(BufferedWriter br = new BufferedWriter(new FileWriter(file,true))){ //
-                br.write(s1.showDetails());
+                br.write(getDetails.showDetails());
                 br.newLine();
 
 
