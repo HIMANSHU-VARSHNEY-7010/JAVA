@@ -11,6 +11,10 @@ import java.util.Scanner;
 public class QUES_1 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in) ;
+        SBI detailsSBI = new SBI("SBI", "Delhi", "Dinesh Kumar",
+                25, 24, 9);
+        System.out.println("Bank Details stored by Constructor :-");
+        System.out.println(detailsSBI);
         System.out.println("Enter the Bank name(BOI, ICICI Bank, BOI): ");
         String BankName = scn.nextLine();
 //        Name, headOfficeAddress, chairmanName, branchCount, fdInterestRate,

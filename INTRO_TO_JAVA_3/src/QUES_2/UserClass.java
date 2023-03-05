@@ -1,14 +1,14 @@
 package QUES_2;
 
-    public class SingletonClass {
-        private static SingletonClass obj ;
+    public class UserClass {
+        private static UserClass obj ;
         private  String  FirstName ;
         private String LastName ;
         private String age ;
 
         private String phoneNo ;
 
-        private SingletonClass(String FirstName , String LastName , String age , String phoneNo){
+        private UserClass(String FirstName , String LastName , String age , String phoneNo){
 
             this.FirstName  = FirstName ;
             this.LastName = LastName ;
@@ -16,9 +16,9 @@ package QUES_2;
             this.phoneNo = phoneNo ;
         }
 
-        public static SingletonClass getInstance(String FirstName , String LastName , String age , String phoneNo){
+        public static UserClass getInstance(String FirstName , String LastName , String age , String phoneNo){
             if(obj == null){
-                obj = new SingletonClass(FirstName , LastName , age , phoneNo) ;
+                obj = new UserClass(FirstName , LastName , age , phoneNo) ;
             }
             else{
                 obj.FirstName  = FirstName ;

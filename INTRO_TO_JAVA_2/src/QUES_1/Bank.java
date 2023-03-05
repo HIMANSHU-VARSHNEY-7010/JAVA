@@ -5,14 +5,23 @@ package QUES_1;
 abstract class Bank {
 
     public String name ;
-
-
     public String headOfficeAddress ;
     public String chairmanName ;
     public int branchCount ;
     public int personalLoanInterestRate ;
     public int homeLoanInterestRate;
 
+    public Bank() {
+    }
+    public Bank(String name, String headOfficeAddress, String chairmanName, int branchCount,
+                int personalLoanInterestRate, int homeLoanInterestRate) {
+        this.name = name;
+        this.headOfficeAddress = headOfficeAddress;
+        this.chairmanName = chairmanName;
+        this.branchCount = branchCount;
+        this.personalLoanInterestRate = personalLoanInterestRate;
+        this.homeLoanInterestRate = homeLoanInterestRate;
+    }
     public String getName() {
         return name;
     }
@@ -60,8 +69,13 @@ abstract class Bank {
     public void setHomeLoanInterestRate(int homeLoanInterestRate) {
         this.homeLoanInterestRate = homeLoanInterestRate;
     }
-    public String toString(){
-        String s = "Details of the Bank are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PersonalLoanInterestRate " +personalLoanInterestRate + "->HomeLoanInterestRate "+homeLoanInterestRate;
-        return s;
+    public String toString() {
+        return "Details of Bank:- " +
+                "Name='" + name + '\'' +
+                "; Head Office Address='" + headOfficeAddress + '\'' +
+                "; Chairman Name='" + chairmanName + '\'' +
+                "; Branch Count=" + branchCount +
+                ";\nPersonal Loan Interest Rate=" + personalLoanInterestRate +
+                "; Home Loan Interest Rate=" + homeLoanInterestRate ;
     }
 }

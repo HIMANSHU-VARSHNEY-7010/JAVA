@@ -1,5 +1,11 @@
 package QUES_1;
 class BOI extends Bank{
+    public BOI(){
+    }
+    public BOI(String name, String headOfficeAddress, String chairmanName, int branchCount,
+               int personalLoanInterestRate, int homeLoanInterestRate) {
+        super(name, headOfficeAddress, chairmanName, branchCount, personalLoanInterestRate, homeLoanInterestRate);
+    }
     public String getName() {
         return name;
     }
@@ -23,6 +29,7 @@ class BOI extends Bank{
     public int getHomeLoanInterestRate() {
         return homeLoanInterestRate;
     }
+
 
 
     public void setName(String name) {
@@ -49,10 +56,14 @@ class BOI extends Bank{
         this.homeLoanInterestRate = homeLoanInterestRate;
     }
 
-    public String toString(){
-
-        String s = "Details for BOI are :- " + name +"->" + headOfficeAddress + "->" + chairmanName +"->"+branchCount+"->PersonalLoanInterestRate " +personalLoanInterestRate + "->HomeLoanInterestRate "+homeLoanInterestRate;
-
-        return s;
+    @Override
+    public String toString() {
+        return "Details of Bank:- " +
+                "Name='" + name + '\'' +
+                "; Head Office Address='" + headOfficeAddress + '\'' +
+                "; Chairman Name='" + chairmanName + '\'' +
+                "; Branch Count=" + branchCount +
+                ";\nPersonal Loan Interest Rate=" + personalLoanInterestRate +
+                "; Home Loan Interest Rate=" + homeLoanInterestRate ;
     }
 }

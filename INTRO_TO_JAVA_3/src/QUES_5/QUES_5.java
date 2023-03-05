@@ -1,18 +1,13 @@
-package QUES_2;
+package QUES_5;
+import QUES_2.UserClass;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-
-//) Create a User class with fields:  firstname, lastname, age, phonenumber.
-// Write a program which accepts values of user fields from commandline,
-// create object and append that to a text file.
-// After every user creation the program should prompt: "Do you want to continue creating users?
-// (Type QUIT to exit)" and keep on accepting values and writing to file unitl user quits.
-public class QUES_2 {
+public class QUES_5 {
     public static void main(String[] args){
-        System.out.println("Hello");
         Scanner scn = new Scanner(System.in) ;
 
         File file = new File("Details.txt");
@@ -38,22 +33,13 @@ public class QUES_2 {
             System.out.println("Enter The Phone Number: ");
             String phoneNo = scn.nextLine() ;
 
-            UserClass getDetails = UserClass.getInstance(FirstName , LastName , age , phoneNo) ;
+            SingletonClass getDetails = SingletonClass.getInstance(FirstName , LastName , age , phoneNo) ;
             System.out.println(getDetails.showDetails());
 
             System.out.println("Do you want to continue creating users? (Type QUIT to exit):");
             String quit = scn.nextLine();
             if(quit.equalsIgnoreCase("QUIT")){
                 flag = false;
-            }
-
-            try(BufferedWriter br = new BufferedWriter(new FileWriter(file,true))){ //
-                br.write(getDetails.showDetails());
-                br.newLine();
-
-
-            }catch (IOException e){
-                System.out.println("Unable To Read File");
             }
 
         }while(flag);
