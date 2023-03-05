@@ -1,5 +1,5 @@
 package QUES_4;
-
+//    4) Write a program to show application of Factory Design Pattern.
 import java.util.Scanner;
 
 public class QUES_4 {

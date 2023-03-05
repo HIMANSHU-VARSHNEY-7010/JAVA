@@ -1,6 +1,6 @@
 package QUES_3;
-//Write a program to count number of occurrences of a word in a file.
-// The file name and word should be supplied through commandline.
+//      3)Write a program to count number of occurrences of a word in a file.
+//          The file name and word should be supplied through commandline.
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,10 +1,6 @@
 package QUES_5;
-import QUES_2.UserClass;
-
-import java.io.BufferedWriter;
+//    5) Write a program to show application of Singleton Design Pattern.
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 public class QUES_5 {
     public static void main(String[] args){
