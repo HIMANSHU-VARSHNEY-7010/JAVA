@@ -10,7 +10,7 @@ public class Employee {
 
     }
     public String toString(){
-        return "Name: "+name+"|Age:"+age+"| Designation: "+designation;
+        return "Name: "+name+" | Age:"+age+" | Designation: "+designation;
     }
 
 }
