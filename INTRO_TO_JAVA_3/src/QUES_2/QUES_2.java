@@ -52,6 +52,8 @@ public class QUES_2 {
 
             }catch (IOException e){
                 System.out.println("Unable To Read File");
+            }catch(Exception e){
+                System.out.println(e.getMessage());
             }
 
         }while(flag);
