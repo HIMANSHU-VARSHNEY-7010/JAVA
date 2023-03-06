@@ -1,14 +1,14 @@
 package QUES_2;
 
-    public class UserClass {
-        private static UserClass obj ;
+    public class UserDetails {
+        private static UserDetails obj ;
         private  String  FirstName ;
         private String LastName ;
         private String age ;
 
         private String phoneNo ;
 
-        private UserClass(String FirstName , String LastName , String age , String phoneNo){
+        private UserDetails(String FirstName , String LastName , String age , String phoneNo){
 
             this.FirstName  = FirstName ;
             this.LastName = LastName ;
@@ -16,9 +16,9 @@ package QUES_2;
             this.phoneNo = phoneNo ;
         }
 
-        public static UserClass getInstance(String FirstName , String LastName , String age , String phoneNo){
+        public static UserDetails getInstance(String FirstName , String LastName , String age , String phoneNo){
             if(obj == null){
-                obj = new UserClass(FirstName , LastName , age , phoneNo) ;
+                obj = new UserDetails(FirstName , LastName , age , phoneNo) ;
             }
             else{
                 obj.FirstName  = FirstName ;

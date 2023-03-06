@@ -1,10 +1,10 @@
 package QUES_2;
 
-public class EmployeeClass implements Comparable<EmployeeClass>{
+public class Employee implements Comparable<Employee>{
     int Age;
     double Salary;
     String Name;
-    EmployeeClass(String Name, int Age, double Salary){
+    Employee(String Name, int Age, double Salary){
         this.Name=Name;
         this.Age =Age;
         this.Salary =Salary;
@@ -19,7 +19,7 @@ public class EmployeeClass implements Comparable<EmployeeClass>{
         return Name;
     }
     @Override
-    public int compareTo(EmployeeClass o) {
+    public int compareTo(Employee o) {
         return this.getName().compareTo(o.getName());
     }
 }

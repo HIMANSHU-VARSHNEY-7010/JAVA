@@ -22,9 +22,6 @@ public class QUES_2 {
         // File Writer can take 2 parameters 1st is File argument 2nd is true which append true or false
         Boolean flag = true;
         do{
-//            System.out.println("Enter Id ");
-//            int id = scn.nextInt() ;
-
             System.out.println("Please enter the details :-");
 
             System.out.println("Enter the FirstName: ");
@@ -39,7 +36,7 @@ public class QUES_2 {
             System.out.println("Enter The Phone Number: ");
             String phoneNo = scn.nextLine() ;
 
-            UserClass getDetails = UserClass.getInstance(FirstName , LastName , age , phoneNo) ;
+            UserDetails getDetails = UserDetails.getInstance(FirstName , LastName , age , phoneNo) ;
             System.out.println(getDetails.showDetails());
 
             System.out.println("Do you want to continue creating users? (Type QUIT to exit):");

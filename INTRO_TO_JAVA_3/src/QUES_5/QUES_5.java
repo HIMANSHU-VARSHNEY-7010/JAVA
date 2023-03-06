@@ -29,7 +29,7 @@ public class QUES_5 {
             System.out.println("Enter The Phone Number: ");
             String phoneNo = scn.nextLine() ;
 
-            SingletonClass getDetails = SingletonClass.getInstance(FirstName , LastName , age , phoneNo) ;
+            User getDetails = User.getInstance(FirstName , LastName , age , phoneNo) ;
             System.out.println(getDetails.showDetails());
 
             System.out.println("Do you want to continue creating users? (Type QUIT to exit):");
