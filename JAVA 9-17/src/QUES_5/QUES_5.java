@@ -21,10 +21,9 @@ public class QUES_5 {
           .or(() -> Optional.of(-1))
           .ifPresent(System.out::println);
 
-        System.out.println(
-              iL.stream()
-                .filter(e -> e>10).findFirst()
-                .orElseThrow(() -> new Exception("Element greater than 10 not found.")));
+        iL.stream()
+          .filter(e -> e>10).findFirst()
+          .orElseThrow(() -> new Exception("Element greater than 10 not found."));
     }
 }
 
