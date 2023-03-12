@@ -9,6 +9,10 @@ public record recordStudent(String name , int id , int age) {
         count ++ ;
     }
 
+//   #ERROR: Cannot assign a value to final variable 'age'
+//    public void ageChange(int age) {
+//        this.age = age;
+//    }
 
     @Override
     public int hashCode(){

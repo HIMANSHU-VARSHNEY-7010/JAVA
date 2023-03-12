@@ -18,6 +18,5 @@ public class QUES_11 {
         System.out.println("HashCodes");
         System.out.println(stu.hashCode());
         System.out.println(stu1.hashCode());
-
     }
 }
