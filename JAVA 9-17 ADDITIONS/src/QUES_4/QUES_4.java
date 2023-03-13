@@ -1,8 +1,5 @@
 package QUES_4;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 //      4. Use iterator stream method to generate a stream
