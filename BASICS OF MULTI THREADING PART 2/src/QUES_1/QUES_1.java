@@ -1,6 +1,6 @@
 package QUES_1;
 import java.util.concurrent.*;
-
+// 1) WAP to show usage of Callable and demonstrate how it is different from Runnable
 public class QUES_1 {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newFixedThreadPool(10) ;
