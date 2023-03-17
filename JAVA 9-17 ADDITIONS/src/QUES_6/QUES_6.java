@@ -11,7 +11,7 @@ public class QUES_6 {
         iL.stream()
                 .filter(e->e>8).findFirst()
                 .stream()
-                .mapMulti((number,consumer) -> IntStream.rangeClosed(1,10)
+                .mapMultiToInt((number,consumer) -> IntStream.rangeClosed(1,10)
                 .forEach(e -> consumer.accept(e*number)))
                 .forEach(System.out::println);
     }

@@ -6,14 +6,9 @@ public class QUES_5 {
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in) ;
 
-        File file = new File("Details.txt");
 
-        ;
-        // File Writer can take 2 parameters 1st is File argument 2nd is true which append true or false
         Boolean flag = true;
         do{
-//            System.out.println("Enter Id ");
-//            int id = scn.nextInt() ;
 
             System.out.println("Please enter the details :-");
 

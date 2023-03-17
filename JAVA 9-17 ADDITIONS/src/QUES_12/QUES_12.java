@@ -12,5 +12,6 @@ public class QUES_12 {
         Square square = new Square(scn.nextFloat());
         System.out.println("Area of Circle is : " + circle.area());
         System.out.println("Area of Square is : " + square.area());
+
     }
 }

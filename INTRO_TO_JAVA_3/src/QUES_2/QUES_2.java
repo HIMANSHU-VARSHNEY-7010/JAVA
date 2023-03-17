@@ -18,8 +18,6 @@ public class QUES_2 {
 
         File file = new File("Details.txt");
 
-        ;
-        // File Writer can take 2 parameters 1st is File argument 2nd is true which append true or false
         Boolean flag = true;
         do{
             System.out.println("Please enter the details :-");
@@ -45,11 +43,10 @@ public class QUES_2 {
                 flag = false;
             }
 
+            // File Writer can take 2 parameters 1st is File argument 2nd is true which append true or false
             try(BufferedWriter br = new BufferedWriter(new FileWriter(file,true))){ //
                 br.write(getDetails.showDetails());
                 br.newLine();
-
-
             }catch (IOException e){
                 System.out.println("Unable To Read File");
             }catch(Exception e){
