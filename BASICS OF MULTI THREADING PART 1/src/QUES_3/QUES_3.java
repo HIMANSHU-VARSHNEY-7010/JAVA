@@ -1,7 +1,7 @@
 package QUES_3;
 //  3) WAP to showcase the usage of volatile in java.
 public class QUES_3 {
-    public static  int counter = 0;
+    public static volatile int counter = 0;
     public static void main(String[] args) {
         Thread t1 = new Thread(() -> {
             int check = counter;

@@ -3,7 +3,7 @@ package QUES_1;
 //        # To check whether the first number is greater than second number or not, Parameter (int ,int )
 //          Return type boolean
 //        # Increment the number by 1 and return incremented value Parameter (int) Return int
-//        # Concatination of 2 string Parameter (String , String ) Return (String)
+//        # Concatenation of 2 string Parameter (String , String ) Return (String)
 //        # Convert a string to uppercase and return . Parameter (String) Return (String)
 public class QUES_1 {
     public static void main(String[] args) {

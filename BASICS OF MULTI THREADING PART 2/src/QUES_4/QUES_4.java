@@ -6,7 +6,8 @@ import java.util.concurrent.*;
 //  4) WAP to return a random integer value from a thread execution using Future.
 public class QUES_4 {
     public static void main(String[] args) {
-        ExecutorService service = Executors.newFixedThreadPool(3) ;
+        int countProcessor = Runtime.getRuntime().availableProcessors();
+        ExecutorService service = Executors.newFixedThreadPool(countProcessor) ;
 
         for(int i = 0 ; i < 5 ; i++){
             Future<Integer> future = service.submit(new Task()) ;
@@ -28,7 +29,7 @@ public class QUES_4 {
         public Integer call() throws Exception {
             try{
                 System.out.println("Thread Working: " + Thread.currentThread().getName());
-                Thread.sleep(2000);
+                Thread.sleep(500);
             }catch (InterruptedException e){
                 e.printStackTrace();
             }
