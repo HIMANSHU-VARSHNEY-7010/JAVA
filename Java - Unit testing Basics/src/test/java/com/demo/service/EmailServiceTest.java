@@ -12,13 +12,13 @@ public class EmailServiceTest {
 
     @Test
     public void sendEmailTest(){
-        Order order = new Order(1, "Mobile", 2000);
+        Order order = new Order();
         assertTrue(EmailService.getInstance().sendEmail(order, "hv@gmail.com"));
     }
 
     @Test(expected = RuntimeException.class)
     public void sendEmailTestForException(){
-        Order order = new Order(1, "Mobile", 2000);
+        Order order = new Order();
         EmailService.getInstance().sendEmail(order);
     }
 

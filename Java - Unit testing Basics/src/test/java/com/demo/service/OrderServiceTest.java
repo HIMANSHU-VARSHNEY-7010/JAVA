@@ -1,7 +1,6 @@
 package com.demo.service;
 
 import com.demo.domain.Order;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -19,7 +18,7 @@ public class OrderServiceTest {
 
     @Test
     public void placeOrderTest(){
-        Order order = new Order(4, "Amul Butter", 54);
+        Order order = new Order();
         assertTrue(OrderService.getInstance().placeOrder(order, "hv@gmail.com"));
     }
 
