@@ -18,9 +18,11 @@ public class QUES_4 {
             }catch (ExecutionException e){
                 e.printStackTrace();
             }
+            if(i==4) System.out.println("Future Completed.");
         }
 
         service.shutdown();
+        System.out.println("Service ShutDown.");
 
     }
 

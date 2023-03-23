@@ -23,30 +23,35 @@ public class QUES_1 {
         th1.start();
         try{
             th1.join();
+            System.out.println("th1 join");
         }catch (InterruptedException e){
             e.printStackTrace();
         }
         th2.start();
         try{
             th2.join();
+            System.out.println("th2 join");
         }catch (InterruptedException e){
             e.printStackTrace();
         }
         th3.start();
         try{
             th3.join();
+            System.out.println("th3 join");
         }catch (InterruptedException e){
             e.printStackTrace();
         }
         t1.start();
         try{
             t1.join();
+            System.out.println("t1 join");
         }catch (InterruptedException e){
             e.printStackTrace();
         }
         t2.start();
         try{
             t2.join();
+            System.out.println("t2 join");
         }catch (InterruptedException e){
             e.printStackTrace();
         }
