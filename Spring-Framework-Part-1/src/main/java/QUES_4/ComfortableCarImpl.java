@@ -10,4 +10,7 @@ public class ComfortableCarImpl {
     public void showCarType(){
         this.car.showCarType();
     }
+    public void showProperties(){
+        System.out.println(this.car.toString());
+    }
 }

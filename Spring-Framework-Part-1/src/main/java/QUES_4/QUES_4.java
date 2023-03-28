@@ -10,6 +10,7 @@ public class QUES_4 {
 		ApplicationContext applicationContext = SpringApplication.run(QUES_4.class);
 		ComfortableCarImpl comfortableCar = applicationContext.getBean(ComfortableCarImpl.class);
 		System.out.println(comfortableCar);
+		comfortableCar.showProperties();
 		comfortableCar.showCarType();
 	}
 
