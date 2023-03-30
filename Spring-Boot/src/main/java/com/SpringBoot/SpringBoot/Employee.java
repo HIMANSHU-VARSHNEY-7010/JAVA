@@ -9,7 +9,7 @@ public class Employee {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public Long empId;
 	public String empName;
-	public String empEmail;
+	public String empDesignation;
 	
 	public Employee() {
 		super();
@@ -20,7 +20,7 @@ public class Employee {
 		super();
 		this.empId = empId;
 		this.empName = empName;
-		this.empEmail = empEmail;
+		this.empDesignation = empEmail;
 	}
 	public Long getEmpId() {
 		return empId;
@@ -34,16 +34,16 @@ public class Employee {
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
-	public String getEmpEmail() {
-		return empEmail;
+	public String getEmpDesignation() {
+		return empDesignation;
 	}
-	public void setEmpEmail(String empEmail) {
-		this.empEmail = empEmail;
+	public void setEmpDesignation(String empDesignation) {
+		this.empDesignation = empDesignation;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [empId=" + empId + ", empName=" + empName + ", empEmail=" + empEmail + "]";
+		return "Employee [empId=" + empId + ", empName=" + empName + ", empEmail=" + empDesignation + "]";
 	}
 	
 	

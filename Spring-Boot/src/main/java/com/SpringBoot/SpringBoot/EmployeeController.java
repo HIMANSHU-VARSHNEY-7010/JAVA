@@ -47,7 +47,7 @@ public class EmployeeController {
      if(oldEmployee.isPresent()){
          Employee updatedEmployee = oldEmployee.get();
          updatedEmployee.setEmpName(newEmployee.getEmpName());
-         updatedEmployee.setEmpEmail(newEmployee.getEmpEmail());
+         updatedEmployee.setEmpDesignation(newEmployee.getEmpDesignation());
 
          return new ResponseEntity<>(repository.save(updatedEmployee), HttpStatus.OK);
      }
