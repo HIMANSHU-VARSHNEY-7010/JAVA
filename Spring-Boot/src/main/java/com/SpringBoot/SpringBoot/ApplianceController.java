@@ -12,8 +12,8 @@ public class ApplianceController {
     public List<Appliance> retrieveAllAppliances(){
         return Arrays.asList(
                 new Appliance(1,"Microwave", "Godrej"),
-                new Appliance(2,"Fan", "Bajaj"),
-                new Appliance(3,"AC", "Whirlpool")
+                new Appliance(2,"Fan", "Bajaj")
+//                new Appliance(3,"AC", "Whirlpool")
         );
     }
 

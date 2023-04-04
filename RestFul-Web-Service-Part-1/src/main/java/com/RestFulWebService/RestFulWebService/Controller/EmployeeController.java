@@ -26,6 +26,8 @@ public class EmployeeController {
     }
     @DeleteMapping("/Employees/{empId}")
     public void deleteEmployee(@PathVariable int empId) {
+        Employee employee = employeeService.findEmployee(empId);
+        if(employee==null) throw new EmployeeNotFoundException("empId: " + empId);
         employeeService.deleteEmployee(empId);
     }
 

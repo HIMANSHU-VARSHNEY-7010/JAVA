@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
 
 @Service
@@ -23,7 +24,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     public Employee findEmployee(Integer empId){
         List<Employee> employeeList = employeeRepository.findAll();
-        return employeeList.stream().filter(e -> e.getEmpID()==empId).findFirst().orElse(null);
+        return employeeList.stream().filter(e -> Objects.equals(e.getEmpID(), empId)).findFirst().orElse(null);
     }
     @Override
     public void deleteEmployee(Integer empId){
