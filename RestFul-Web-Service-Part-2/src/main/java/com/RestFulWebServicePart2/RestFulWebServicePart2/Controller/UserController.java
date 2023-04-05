@@ -60,13 +60,17 @@ public class UserController {
                             schema = @Schema(implementation = User.class)) }) })
     @PostMapping("/users")
     public User createUser(@RequestBody UserDTO userDTO) {
-        return userService.createUser(userDTO);
+        return userService.createUserDTO(userDTO);
+    }
+    @PostMapping("/users2")
+    public String createUser(@RequestBody User user) {
+        return userService.createUser(user);
     }
     @GetMapping("/users2")
     public MappingJacksonValue getAllUser(){
         return userService.dynamicFiltering();
     }
-    @GetMapping("/users1/{id}")
+    @GetMapping("/user/{id}")
     public EntityModel<User> SingleUsers(@PathVariable int id){
 
         User user = userService.findUser(id) ;

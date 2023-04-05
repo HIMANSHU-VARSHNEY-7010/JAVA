@@ -2,11 +2,14 @@ package com.RestFulWebServicePart2.RestFulWebServicePart2.Entity;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Users")
-//@JsonFilter("SomeBeanFilter")
+//@JsonFilter("userFilter")
+//@JsonIgnoreProperties("userEmail")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

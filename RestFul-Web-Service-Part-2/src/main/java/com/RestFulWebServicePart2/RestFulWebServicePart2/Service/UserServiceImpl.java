@@ -24,15 +24,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User createUser(UserDTO userDTO) {
+    public User createUserDTO(UserDTO userDTO) {
         User user = new User();
         user.setUserID(userDTO.getUserID());
         user.setUserName(userDTO.getUserName());
         user.setUserEmail(userDTO.getUserEmail());
         user.setUserPassword(userDTO.getUserPassword());
+        System.out.println(user.getUserEmail());
         System.out.println(user.getUserPassword());
         return userRepository.save(user);
     }
+    @Override
+    public String createUser(User user) {
+        userRepository.save(user);
+        return "User Created Successfully.";
+    }
+
     @Override
     public User findUser(Integer userId){
         List<User> userList = userRepository.findAll();
@@ -52,9 +59,9 @@ public class UserServiceImpl implements UserService {
     public MappingJacksonValue dynamicFiltering(){
                   MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(findAll()) ;
 
-        SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept("userId",
+        SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept("userID",
                                                                                     "userName","userEmail");
-        FilterProvider filters = new SimpleFilterProvider().addFilter("SomeBeanFilter",filter);
+        FilterProvider filters = new SimpleFilterProvider().addFilter("userFilter",filter);
         mappingJacksonValue.setFilters(filters);
         return mappingJacksonValue;
     }

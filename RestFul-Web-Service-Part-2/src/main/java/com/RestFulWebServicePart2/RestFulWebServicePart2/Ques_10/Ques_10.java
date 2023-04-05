@@ -1,14 +1,11 @@
-package com.RestFulWebServicePart2.RestFulWebServicePart2.Q10;
+package com.RestFulWebServicePart2.RestFulWebServicePart2.Ques_10;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestApiApplication {
-
+public class Ques_10 {
 	public static void main(String[] args) {
-		SpringApplication.run(RestApiApplication.class, args);
-
+		SpringApplication.run(Ques_10.class, args);
 	}
-
 }

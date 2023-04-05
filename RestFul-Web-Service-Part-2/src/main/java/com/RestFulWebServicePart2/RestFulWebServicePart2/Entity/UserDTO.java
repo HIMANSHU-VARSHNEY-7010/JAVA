@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "UsersDTO")
-@JsonFilter("SomeBeanFilter")
 public class UserDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
