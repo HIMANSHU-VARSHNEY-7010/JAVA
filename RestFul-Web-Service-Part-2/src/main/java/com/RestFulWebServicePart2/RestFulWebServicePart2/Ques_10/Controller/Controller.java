@@ -1,9 +1,9 @@
 package com.RestFulWebServicePart2.RestFulWebServicePart2.Ques_10.Controller;
 
 import com.RestFulWebServicePart2.RestFulWebServicePart2.Ques_10.Entity.UserDTO;
-import com.RestFulWebServicePart2.RestFulWebServicePart2.Ques_10.Service.ServiceIMPL;
 import com.RestFulWebServicePart2.RestFulWebServicePart2.Ques_10.Entity.UserV1;
 import com.RestFulWebServicePart2.RestFulWebServicePart2.Ques_10.Entity.UserV2;
+import com.RestFulWebServicePart2.RestFulWebServicePart2.Ques_10.Service.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 public class Controller {
     @Autowired
-    public ServiceIMPL service ;
+    public ServiceImpl service ;
 
     // URI Versioning
     @GetMapping("/user/v1")

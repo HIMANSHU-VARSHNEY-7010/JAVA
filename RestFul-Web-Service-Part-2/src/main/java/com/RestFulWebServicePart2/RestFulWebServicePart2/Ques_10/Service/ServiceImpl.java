@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 @Service
-public class ServiceIMPL implements UsersService {
+public class ServiceImpl implements UsersService {
 
     private static List<UserV1> usersList1 = new ArrayList<>();
     private static List<UserV2> usersList2 = new ArrayList<>();

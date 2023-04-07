@@ -1,11 +1,13 @@
-package com.SpringDataJPAwithHibernatePart1.SpringDataJPAwithHibernatePart1;
+package JPA.SpringJpa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringDataJpaWithHibernatePart1ApplicationTests {
+class SpringJpaApplicationTests {
+
 	@Test
 	void contextLoads() {
 	}
+
 }
