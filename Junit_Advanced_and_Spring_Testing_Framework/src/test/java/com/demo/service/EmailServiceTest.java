@@ -20,15 +20,16 @@ public class EmailServiceTest {
 //    Order mockOrder = mock(Order.class);
     @InjectMocks
     EmailService emailService ;
-    @Captor
-    ArgumentCaptor<Exception> argumentCaptor;
+
 
     @Test(expected = RuntimeException.class)
     public void testSendEmail(){
+        assertNotNull(mockOrder);
         emailService.sendEmail(mockOrder);
     }
     @Test
     public void testSendEmailBoolean_True(){
+        assertNotNull(mockOrder);
         String cc = "hv@gmail.com" ;
         assertTrue(emailService.sendEmail(mockOrder, cc)) ;
     }

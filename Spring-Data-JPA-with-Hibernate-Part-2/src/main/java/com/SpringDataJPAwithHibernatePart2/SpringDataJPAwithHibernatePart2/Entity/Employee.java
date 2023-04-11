@@ -14,6 +14,8 @@ public class Employee {
     private String lastName ;
     @Column(name = "emp_salary")
     private int salary ;
+    @Embedded
+    private Salary sal;
     @Column(name = "emp_age")
     private  int age ;
 
@@ -26,6 +28,10 @@ public class Employee {
         this.lastName = lastName;
         this.salary = salary;
         this.age = age;
+    }
+
+    public void setSal(Salary sal) {
+        this.sal = sal;
     }
 
     public void setId(int id) {
@@ -46,6 +52,10 @@ public class Employee {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Salary getSal() {
+        return sal;
     }
 
     public int getId() {

@@ -27,6 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         emp.setFirstName(employee.getFirstName());
         emp.setLastName(employee.getLastName());
         emp.setSalary(employee.getSalary());
+        emp.setSal(employee.getSal());
         emp.setAge(employee.getAge());
         employeeRepository.save(emp);
         return "Employee details updated in employee table in the Database.";
@@ -43,13 +44,12 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     public List<Employee> getEmployee(){
-        return employeeRepository.findAll();
+        List<Employee> employeeList = employeeRepository.findAll();
+        if(employeeList.size()==0) throw new EmployeeNotFoundException("Employee Table is Empty.");
+        else return employeeList;
     }
     public Employee getEmployeeById(int id) {
-        List<Employee> employeeList = getEmployee();
-        Employee employee = employeeList.stream()
-                .filter(e -> Objects.equals(e.getId(), id))
-                .findFirst().orElse(null);
+        Employee employee = getEmpById(id);
         if (employee == null) throw new EmployeeNotFoundException("Employee with id: " + id + " not Found.");
         else return employee;
     }
@@ -61,7 +61,9 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employee;
     }
     public List<Object[]> displayNameSorted(){
-        return employeeRepository.displayName();
+        List<Object[]> objects = employeeRepository.displayName();
+        if(objects.size()==0) throw new EmployeeNotFoundException("There is only one Employee or the list is Empty.");
+        return objects;
     }
 
     public void updateMinSalary(int newSalary){
@@ -74,7 +76,10 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     public List<Object[]> findByLastName(){
-        return employeeRepository.findLastName();
+        List<Object[]> objects = employeeRepository.findLastName();
+        if(objects.size()==0) throw new EmployeeNotFoundException("No one exist in the Employee Table where" +
+                "                                                    last name ends with 'singh'.");
+        return objects;
     }
 
     public void deleteEmployeeOnAge(int maxAge){
