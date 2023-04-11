@@ -3,6 +3,8 @@ package com.demo.service;
 import com.demo.domain.Order;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -22,19 +24,16 @@ public class OrderServiceTest {
 
     @InjectMocks
     OrderService orderService ;
+    @Captor
+    ArgumentCaptor<Order> argumentCaptor;
 
     @Test()
     public void testPlaceOrder(){
         assertNotNull(mockOrder);
         orderService.placeOrder(mockOrder);
-        verify(emailService,times(1)).sendEmail(mockOrder);
+        verify(emailService,times(1)).sendEmail(argumentCaptor.capture());
+        assertEquals(mockOrder,argumentCaptor.getValue());
     }
-//    @Test()
-//    public void testPlaceOrder_False(){
-//        assertNotNull(mockOrder);
-//        orderService.placeOrder(mockOrder);
-//        verify(emailService,times(2)).sendEmail(mockOrder);
-//    }
 
     @Test
     public void testBooleanPlaceOrderTrue(){

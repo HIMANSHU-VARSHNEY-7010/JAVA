@@ -3,6 +3,8 @@ package com.demo.service;
 import com.demo.domain.Order;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -18,6 +20,8 @@ public class EmailServiceTest {
 //    Order mockOrder = mock(Order.class);
     @InjectMocks
     EmailService emailService ;
+    @Captor
+    ArgumentCaptor<Exception> argumentCaptor;
 
     @Test(expected = RuntimeException.class)
     public void testSendEmail(){
