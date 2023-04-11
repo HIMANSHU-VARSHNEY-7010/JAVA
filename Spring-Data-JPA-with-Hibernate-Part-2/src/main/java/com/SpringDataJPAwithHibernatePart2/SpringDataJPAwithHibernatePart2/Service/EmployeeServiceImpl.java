@@ -27,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         emp.setFirstName(employee.getFirstName());
         emp.setLastName(employee.getLastName());
         emp.setSalary(employee.getSalary());
-        emp.setSal(employee.getSal());
+        emp.setSalaryStructure(employee.getSalaryStructure());
         emp.setAge(employee.getAge());
         employeeRepository.save(emp);
         return "Employee details updated in employee table in the Database.";

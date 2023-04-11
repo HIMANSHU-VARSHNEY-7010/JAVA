@@ -15,27 +15,24 @@ public class Employee {
     @Column(name = "emp_salary")
     private int salary ;
     @Embedded
-    private Salary sal;
+    private Salary salaryStructure;
     @Column(name = "emp_age")
     private  int age ;
 
     public Employee() {
     }
 
-    public Employee(int id, String firstName, String lastName, int salary, int age) {
+    public Employee(int id, String firstName, String lastName, int salary, Salary salaryStructure, int age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
+        this.salaryStructure = salaryStructure;
         this.age = age;
     }
 
-    public void setSal(Salary sal) {
-        this.sal = sal;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setSalaryStructure(Salary salaryStructure) {
+        this.salaryStructure = salaryStructure;
     }
 
     public void setFirstName(String firstName) {
@@ -54,8 +51,8 @@ public class Employee {
         this.age = age;
     }
 
-    public Salary getSal() {
-        return sal;
+    public Salary getSalaryStructure() {
+        return salaryStructure;
     }
 
     public int getId() {
@@ -85,8 +82,8 @@ public class Employee {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", salary=" + salary +
+                ", salaryStructure=" + salaryStructure +
                 ", age=" + age +
                 '}';
     }
-
 }
