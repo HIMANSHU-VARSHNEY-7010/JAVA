@@ -51,7 +51,7 @@ public class OrderServiceTest {
         assertFalse(orderService.placeOrder(mockOrder , cc)); ;
     }
     @Test
-    public void testNullObject() {
+    public void getInstanceTest() {
         assertNotNull(mockOrder);
     }
 

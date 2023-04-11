@@ -7,8 +7,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
@@ -28,6 +27,10 @@ public class EmailServiceTest {
     public void testSendEmailBoolean_True(){
         String cc = "hv@gmail.com" ;
         assertTrue(emailService.sendEmail(mockOrder, cc)) ;
+    }
+    @Test
+    public void getInstanceTest(){
+        assertNotNull(emailService);
     }
 //    @Test
 //    public void testSendEmailBoolean_False(){
