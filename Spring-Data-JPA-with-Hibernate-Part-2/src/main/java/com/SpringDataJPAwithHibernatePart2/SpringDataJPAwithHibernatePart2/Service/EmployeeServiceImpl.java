@@ -34,10 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     public String deleteEmployee(int id){
-        List<Employee> employeeList = getEmployee();
-        Employee employee = employeeList.stream()
-                .filter(e -> Objects.equals(e.getId(), id))
-                .findFirst().orElse(null);
+        Employee employee = getEmpById(id);
         if (employee == null) throw new EmployeeNotFoundException("Employee with id: " + id + " not Found.");
         else employeeRepository.deleteById(id);
         return "Employee details deleted from employee table in the Database.";
@@ -54,7 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         else return employee;
     }
     public Employee getEmpById(int id) {
-        List<Employee> employeeList = getEmployee();
+        List<Employee> employeeList = employeeRepository.findAll();
         Employee employee = employeeList.stream()
                 .filter(e -> Objects.equals(e.getId(), id))
                 .findFirst().orElse(null);
