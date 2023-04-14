@@ -54,12 +54,14 @@ public class EmployeeController {
     public List<Object[]> displayNameAfterSorting(){
         return employeeService.displayNameSorted();
     }
+
     @Transactional
     @PutMapping("/employee/salary/{newSalary}")
     public String updateSalaryHavingMinSalary( @PathVariable int newSalary){
         employeeService.updateMinSalary(newSalary);
         return "Operation Successful.";
     }
+
     @Transactional
     @DeleteMapping("/employee/delete/salary/min/{minSalary}")
     public String deleteWithMinSalary(@PathVariable int minSalary){

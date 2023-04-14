@@ -7,7 +7,7 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity
 //@PrimaryKeyJoinColumn(name="payment_id")  // JOINED
-//@DiscriminatorValue(value = "CC")   // SINGLE_TABLE
+@DiscriminatorValue(value = "CC")   // SINGLE_TABLE
 public class CreditCard extends Payment{
     @Column(name="card_number")
     private long cardNumber;

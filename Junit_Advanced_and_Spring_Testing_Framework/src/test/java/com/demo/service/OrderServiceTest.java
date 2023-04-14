@@ -3,10 +3,7 @@ package com.demo.service;
 import com.demo.domain.Order;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.mockito.*;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.junit.Assert.*;
@@ -18,7 +15,7 @@ public class OrderServiceTest {
 
     @Mock
     public EmailService emailService ;
-    @Mock
+    @Spy
     public Order mockOrder;
 //    Order mockOrder = mock(Order.class);
 

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 //@PrimaryKeyJoinColumn(name="payment_id")  // JOINED
-//@DiscriminatorValue(value = "Cheque")   // SINGLE_TABLE
+@DiscriminatorValue(value = "Cheque")   // SINGLE_TABLE
 public class Cheque extends Payment{
     @Column(name="cheque_number")
     private long chequeNumber;

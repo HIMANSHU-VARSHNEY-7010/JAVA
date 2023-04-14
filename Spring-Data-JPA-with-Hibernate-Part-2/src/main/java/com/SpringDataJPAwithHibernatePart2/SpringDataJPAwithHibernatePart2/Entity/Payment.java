@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 //          Implement and demonstrate Joined strategy.
 //          Implement and demonstrate Table Per Class strategy.
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-//@DiscriminatorColumn(name = "payment_mode",discriminatorType = DiscriminatorType.STRING)  // SINGLE_TABLE
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "payment_mode",discriminatorType = DiscriminatorType.STRING)  // SINGLE_TABLE
 public class Payment {
     @Id
     @Column(name="payment_id")

@@ -1,9 +1,10 @@
-package com.SpringDataJPAwithHibernatePart2.SpringDataJPAwithHibernatePart2.Service;
+package com.SpringDataJPAwithHibernatePart2.SpringDataJPAwithHibernatePart2.Service.Impl;
 
 import com.SpringDataJPAwithHibernatePart2.SpringDataJPAwithHibernatePart2.Entity.Employee;
 import com.SpringDataJPAwithHibernatePart2.SpringDataJPAwithHibernatePart2.Exception.EmployeeAlreadyExistException;
 import com.SpringDataJPAwithHibernatePart2.SpringDataJPAwithHibernatePart2.Exception.EmployeeNotFoundException;
 import com.SpringDataJPAwithHibernatePart2.SpringDataJPAwithHibernatePart2.Repository.EmployeeRepository;
+import com.SpringDataJPAwithHibernatePart2.SpringDataJPAwithHibernatePart2.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     EmployeeRepository employeeRepository;
 
