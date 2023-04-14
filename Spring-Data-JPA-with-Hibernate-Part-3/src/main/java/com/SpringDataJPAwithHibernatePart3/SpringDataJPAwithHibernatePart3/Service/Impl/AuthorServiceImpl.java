@@ -1,4 +1,4 @@
-package com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Service;
+package com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Service.Impl;
 
 import com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Entity.Author;
 import com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Entity.Book;
@@ -6,6 +6,7 @@ import com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Excep
 import com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Exception.AuthorNotFoundException;
 import com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Repository.AuthorRepository;
 import com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Repository.BookRepository;
+import com.SpringDataJPAwithHibernatePart3.SpringDataJPAwithHibernatePart3.Service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +19,8 @@ import java.util.Set;
 public class AuthorServiceImpl implements AuthorService {
     @Autowired
     AuthorRepository authorRepository;
-    @Autowired
-    BookRepository bookRepository;
+    @Autowired                              //      ManyToMany
+    BookRepository bookRepository;          //      ManyToMany
 
     public String addAuthor(Author author){
         if(getAuthById(author.getId())!=null)
